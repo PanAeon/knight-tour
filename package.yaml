@@ -1,0 +1,49 @@
+name:                knight-tour
+version:             0.1.0.0
+homepage:            https://github.com/githubuser/knight-tour#readme
+license:             BSD3
+
+#ghc-options: -Wall -O2
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs:
+      - test
+    dependencies:
+      - hspec
+      - knight-tour
+
+library:
+  source-dirs:
+    - src
+
+executables:
+  knight-tour:
+    #ghc-options: -Wall -O2 -rtsopts
+    main: app/Main.hs
+    dependencies:
+      - knight-tour
+
+dependencies:
+  - base
+  - transformers
+  - mtl
+  - stm
+  - containers
+  - unordered-containers
+  - monad-loops
+  - optparse-applicative
+  - bytestring
+  - MissingH
+  - either
+  - text
+  - vector
+  - cryptonite
+  - sandi
+  - time
+  - memory
+  - word8
+  - diagrams-lib
+  - diagrams-core
+  - diagrams-svg
